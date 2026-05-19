@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // 1. Recibir y sanitizar los datos
     $nombre = htmlspecialchars($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $asunto_usuario = htmlspecialchars($_POST['subject']);
